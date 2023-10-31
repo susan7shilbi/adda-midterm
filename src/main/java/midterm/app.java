@@ -2,9 +2,9 @@ package midterm;
 
 public class app {
 	private static final String predefinedUsername = 
-			"Susan"; 
+			"ram"; 
 	private static final String predefinedId = 
-			"20MIC0006"; 
+			"3025"; 
 	public static boolean validate(String inputUsername, 
 	String inputId) { 
 	return inputUsername.equals(predefinedUsername) && inputId.equals(predefinedId);

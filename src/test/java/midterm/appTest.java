@@ -1,12 +1,20 @@
 package midterm;
 
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 public class appTest {
-	private static final String predefinedUsername = 
-			"Susan"; 
-	private static final String predefinedId = 
-			"20MIC0006"; 
-	public static boolean validate(String inputUsername, 
-	String inputId) { 
-	return inputUsername.equals(predefinedUsername) && inputId.equals(predefinedId);
-}
+	@Test
+    public void testValidUser() {
+        Assert.assertTrue(validate("ram", "3025"));
+    }
+
+    @Test
+    public void testInvalidUser() {
+        Assert.assertFalse(validate("wronguser", "wrongId"));
+    }
+
+    public static boolean validate(String username, String id) {
+        return username.equals("ram") && id.equals("3025");
+    }
 }
